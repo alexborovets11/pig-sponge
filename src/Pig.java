@@ -26,7 +26,26 @@ public class Pig {
 
     // Implement your solution here!
     public static String pigLatin(String sentence) {
-        return null;
+        String[] words = sentence.split(" ");
+
+        StringBuilder result = new StringBuilder();
+
+        String vowels = "aeiou";
+
+        for (String word : words) {
+            StringBuilder pigWord = new StringBuilder(word);
+
+            if (vowels.indexOf(word.charAt(0)) == -1) {
+                char firstLetter = pigWord.charAt(0);
+                pigWord.deleteCharAt(0);
+                pigWord.append(firstLetter).append("ay");
+            }
+
+            result.append(pigWord).append(" ");
+        }
+
+        return result.toString().trim();
+
     }
 
 

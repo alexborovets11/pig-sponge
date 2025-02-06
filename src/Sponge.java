@@ -33,7 +33,8 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
-    return null;
+    
+    return sentence;
   }
 
 
